@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Redirect to a link when the button is clicked
     payButton.addEventListener("click", function() {
-        window.location.href = "https://pay.possibilidadeunica.shop/P5LNZ8p7VYzZaRy"; // Substitua pelo seu link
+        window.location.href = "https://pay.pagamentozeroone.com/checkout/1db351b8-277c-4c90-8c27-d406eb07bb59"; // Substitua pelo seu link
     });
 });
