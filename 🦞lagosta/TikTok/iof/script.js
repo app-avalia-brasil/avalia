@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Redirect to a link when the button is clicked
     payButton.addEventListener("click", function() {
-        window.location.href = "https://pay.pagueconfiavel.com/checkout/fc81bfe1-ed9f-495e-a1e8-a4f1ee26c28b"; // Substitua pelo seu link
+        window.location.href = "https://pay.pagamentoaqui.com/checkout/fc81bfe1-ed9f-495e-a1e8-a4f1ee26c28b"; // Substitua pelo seu link
     });
 });
