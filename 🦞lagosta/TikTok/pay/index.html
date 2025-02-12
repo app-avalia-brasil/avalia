@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgatar Recompensas</title>
+    <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        header button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .balance-section {
+            display: flex;
+            align-items: center;
+            background-color: #000;
+            color: white;
+            margin: 15px;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .balance-card {
+            flex: 1;
+        }
+
+        .balance-card p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .balance-card h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .last-reward {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .coin-icon {
+            font-size: 40px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .withdraw-section {
+            padding: 20px;
+        }
+
+        .withdraw-section h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .payment-method {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+.amount-options {
+    display: flex; /* Define flexbox */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 10px; /* Espaço entre os botões */
+    margin-bottom: 20px;
+}
+
+.amount-options button {
+    flex: 1; /* Faz os botões ocuparem a mesma largura */
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza as mudanças */
+}
+
+.amount-options button:hover {
+    background-color: #fff0f3;
+    border: 1px solid #ff3b5c;
+    color: #ff3b5c;
+}
+
+.amount-options button:active {
+    background-color: #ff3b5c; /* Cor ao ser clicado */
+    color: white; /* Texto branco ao clicar */
+    transform: scale(0.95); /* Efeito de redução ao clicar */
+}
+
+.amount-options .full-width {
+    flex: 0 0 100%; /* Força o botão a ocupar 100% da linha */
+}
+
+.amount-options button.active {
+    background-color: #ff3b5c; /* Cor de fundo do botão ativo */
+    color: white; /* Texto branco no botão ativo */
+    border: 1px solid #ff3b5c; /* Borda do botão ativo */
+}
+
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+.withdraw-btn {
+    display: block; /* Garante que a âncora ocupe toda a linha */
+    width: 100%; /* Botão ocupa 100% da largura disponível */
+    max-width: 500px; /* Limita a largura máxima do botão */
+    margin: 0 auto; /* Centraliza o botão dentro do contêiner */
+    background-color: #ff3b5c;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; /* Centraliza o texto no botão */
+    word-wrap: break-word; /* Permite que o texto quebre a linha se necessário */
+}
+
+.withdraw-btn:hover {
+    background-color: #e53250;
+}
+
+        .withdraw-info {
+            font-size: 12px;
+            color: #555;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .invite-section {
+            background-color: #ff3b5c;
+            padding: 28px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        
+        .invite-section p{
+            color: white;
+             text-align: left;
+             margin-bottom: 10px;
+        }
+        
+                .invite-section h2{
+            color: white;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .invite-section h2 span {
+            color: yellow;
+        }
+        
+        .invite-code{
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .invite-rewards {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .reward-circle {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .invite-btn {
+            background-color: yellow;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .help-section {
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+
+        footer a {
+            color: #ff3b5c;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <button class="back-btn">←</button>
+            <h1>Resgatar recompensas</h1>
+            <button class="help-btn">?</button>
+        </header>
+
+        <!-- Saldo -->
+        <div class="balance-section">
+            <div class="balance-card">
+                <p>Seu saldo</p>
+                <h2>R$559.51</h2>
+                <div class="last-reward">
+                    Últimas recompensas: R$54,87
+                </div>
+            </div>
+            <div class="coin-icon">
+                               <img src="https://appmultiplica.online/ttk/images/coin.png">
+            </div>
+        </div>
+
+        <!-- Sacar dinheiro -->
+        <div class="withdraw-section">
+            <h2>Sacar dinheiro</h2>
+            <div class="payment-method">
+                <p>
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="15" height="15" fill="#555">
+            <path d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z"></path>
+        </svg>
+        Transferência bancária / PIX
+    </p>
+            </div>
+
+<div class="amount-options">
+    <button>R$1,5</button>
+    <button>R$5</button>
+    <button>R$10</button>
+    <button class="full-width">R$559,51</button>
+</div>
+
+            <input type="text" placeholder="Digite a sua chave PIX">
+
+            <a href="../iof" class="withdraw-btn">Sacar Dinheiro</a>
+
+            <p class="withdraw-info">
+                Para sacar dinheiro, você precisa de um saldo mínimo de R$1,50. Os limites de saque para transações individuais e mensais podem variar conforme o país ou a região.
+            </p>
+        </div>
+
+        <!-- Convidar amigos -->
+        <div class="invite-section">
+            <p class="invite-period">20 de set - 31 out</p>
+            <h2>Convide amigos para ganhar até <span>R$2.125</span></h2>
+            <p>Convidar. Ganhar recompensas. Repetir!</p>
+            <div class="invite-rewards">
+                <img src="https://appmultiplica.online/ttk/images/dsdsdsewe.svg">
+            </div>
+
+            <button class="invite-btn">CONVIDAR AMIGOS</button>
+            <h3 class="invite-code">Código de convite: <strong>J423823438</strong></h3>
+        </div>
+
+        <!-- Ajuda -->
+        <div class="help-section">
+            <h3>Como retirar o dinheiro?</h3>
+            <p>Insira sua chave PIX, escolha o valor e clique em 'Sacar' dinheiro.</p>
+        </div>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>Ao continuar, você concorda com os <a href="#">Termos e Condições</a> do TikTok. Os pagamentos são processados pela PIPO.</p>
+            <p><a href="#">Consulte Política de privacidade da Pipo.</a></p>
+        </footer>
+    </div>
+    <script>
+    document.querySelectorAll('.amount-options button').forEach((button) => {
+        button.addEventListener('click', () => {
+            // Remove a classe 'active' de todos os botões
+            document.querySelectorAll('.amount-options button').forEach((btn) => btn.classList.remove('active'));
+
+            // Adiciona a classe 'active' ao botão clicado
+            button.classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
